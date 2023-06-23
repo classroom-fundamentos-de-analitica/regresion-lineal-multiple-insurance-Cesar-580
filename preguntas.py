@@ -72,7 +72,7 @@ def pregunta_03():
     # Importe GridSearchCV
     # Importe Pipeline
     # Importe OneHotEncoder
-    from sklearn.compose import make_column_selectors
+    from sklearn.compose import make_column_selector
     from sklearn.compose import make_column_transformer
     from sklearn.feature_selection import SelectKBest
     from sklearn.feature_selection import f_regression
@@ -91,7 +91,7 @@ def pregunta_03():
                 make_column_transformer(
                     (
                         OneHotEncoder(),
-                        make_column_selectors(dtype_include= object),
+                        make_column_selector(dtype_include= object),
                     ),
                     remainder= 'passthrough',
                 ),
